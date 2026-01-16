@@ -2,11 +2,8 @@ app = "riya-portfolio"
 primary_region = "yyz"
 
 [build]
-  builder = "paackages"
-
-[env]
-  PORT = "3000"
-
+  builder = "dockerfile"
+  
 [http_service]
   internal_port = 3000
   force_https = true
