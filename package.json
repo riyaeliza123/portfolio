@@ -1,0 +1,16 @@
+{
+  "name": "riya-portfolio",
+  "version": "1.0.0",
+  "description": "Tech portfolio website for Riya Eliza Shaju",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": ["portfolio", "data-science"],
+  "author": "Riya Eliza Shaju",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
