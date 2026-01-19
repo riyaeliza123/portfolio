@@ -1220,3 +1220,121 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #1e40af;
 }
+
+/* Hamburger Menu Styles */
+.hamburger {
+  position: fixed;
+  left: 20px;
+  top: 20px;
+  z-index: 1000;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 0;
+}
+
+.hamburger span {
+  width: 28px;
+  height: 3px;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  display: block;
+}
+
+.hamburger.at-header span {
+  background: white;
+  border: 1px solid white;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(10px, 10px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* Sidebar Navigation Styles */
+.sidebar-nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 250px;
+  height: 100vh;
+  background: rgba(15, 23, 42, 0.98);
+  backdrop-filter: blur(10px);
+  padding: 100px 0 20px 0;
+  z-index: 999;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  overflow-y: auto;
+}
+
+.sidebar-nav.active {
+  transform: translateX(0);
+}
+
+.sidebar-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-nav li {
+  margin: 0;
+}
+
+.sidebar-nav a {
+  display: block;
+  padding: 15px 25px;
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 400;
+  transition: all 0.3s ease;
+  border-left: 3px solid transparent;
+}
+
+.sidebar-nav .submenu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-nav .submenu li {
+  margin: 0;
+}
+
+.sidebar-nav .submenu a {
+  padding: 10px 25px 10px 45px;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.sidebar-nav a:hover {
+  color: white;
+  background-color: rgba(102, 126, 234, 0.2);
+  border-left-color: #667eea;
+  padding-left: 30px;
+}
+
+/* Close sidebar when clicking on a link */
+.sidebar-nav a {
+  cursor: pointer;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+}

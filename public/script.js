@@ -44,3 +44,48 @@ document.querySelectorAll('section, .project-card, .publication-item, .education
   el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
   observer.observe(el);
 });
+
+// Hamburger Menu Toggle
+const hamburger = document.getElementById('hamburger-toggle');
+const sidebarNav = document.getElementById('sidebar-nav');
+
+if (hamburger && sidebarNav) {
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    sidebarNav.classList.toggle('active');
+  });
+
+  // Close sidebar when clicking on a link
+  sidebarNav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('active');
+      sidebarNav.classList.remove('active');
+    });
+  });
+
+  // Close sidebar when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!hamburger.contains(e.target) && !sidebarNav.contains(e.target)) {
+      hamburger.classList.remove('active');
+      sidebarNav.classList.remove('active');
+    }
+  });
+
+  // Change hamburger icon color based on scroll position
+  const heroSection = document.querySelector('.hero');
+  window.addEventListener('scroll', () => {
+    if (heroSection) {
+      const heroBottom = heroSection.offsetHeight;
+      if (window.scrollY < heroBottom - 50) {
+        hamburger.classList.add('at-header');
+      } else {
+        hamburger.classList.remove('at-header');
+      }
+    }
+  });
+
+  // Set initial state
+  if (heroSection && window.scrollY < heroSection.offsetHeight - 50) {
+    hamburger.classList.add('at-header');
+  }
+}
