@@ -582,11 +582,6 @@ body {
   width: 100%;
   height: auto;
   display: block;
-  transition: transform 0.3s;
-}
-
-.project-item:hover .project-image img {
-  transform: scale(1.05);
 }
 
 .project-content {
