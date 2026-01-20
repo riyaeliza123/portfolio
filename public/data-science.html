@@ -22,9 +22,13 @@
       </a>
       <h1>Data Science and Analytics</h1>
       <div class="detail-nav">
-        <a href="machine-learning.html" class="nav-link">Machine Learning</a>
+        <a href="#overview" class="nav-link">Overview</a>
         <span>·</span>
-        <a href="community-engagement.html" class="nav-link">Community Engagement</a>
+        <a href="#what-i-do" class="nav-link">Key Responsibilities</a>
+        <span>·</span>
+        <a href="#tools-tech" class="nav-link">Tools & Tech</a>
+        <span>·</span>
+        <a href="#projects-impact" class="nav-link">Projects</a>
       </div>
     </div>
   </section>
@@ -33,40 +37,148 @@
   <section class="detail-content">
     <div class="container">
       <!-- Overview Section -->
-      <div class="content-section">
+      <div class="content-section" id="overview">
         <h2>Overview</h2>
         <p>Currently applying data science to marine environmental monitoring, I've develop automated data pipelines, analytics tools, and machine learning models used by conservation research teams and partner agencies. My work includes models for monitoring, large-scale data processing, and dashboards that make complex data easier to understand and act on. I believe that robust data pipelines can support robust research and make high-quality data work possible in underrepresented fields.</p>
+        <p>Most of my analytics work supports environmental and conservation research, where data is often fragmented, large-scale, and time-sensitive. I aim to build systems that are reliable, transparent, and useful for both technical and non-technical users.</p>
       </div>
 
-      <!-- Applications Section (Placeholder) -->
-      <div class="content-section">
-        <h2>Applications</h2>
-        <p class="placeholder-text">Content coming soon...</p>
+      <!-- What I Do Section -->
+      <div class="content-section" id="what-i-do">
+        <h2>Key Responsibilities</h2>
+        <p>I turn messy, fragmented data into clean, usable outputs that support research and decision-making. I focus on choosing tools that fit the problem and keeping solutions as <mark>simple</mark> as possible.</p>
+        <ul class="what-i-do-list">
+          <li>Build and maintain reliable, reproducible and scalable data pipelines</li>
+          <li>Combine data from multiple sources into consistent datasets</li>
+          <li>Explore and analyze large datasets to identify patterns and trends</li>
+          <li>Create clear dashboards and tables used by researchers and partner agencies</li>
+          <li>Reduce manual data handling and reporting through automation</li>
+        </ul>
       </div>
 
-      <!-- Tools & Technologies Section (Placeholder) -->
-      <div class="content-section">
-        <h2>Tools & Technologies</h2>
-        <p class="placeholder-text">Content coming soon...</p>
+      <!-- Tools & Tech Stack Section -->
+      <div class="content-section" id="tools-tech">
+        <h2>Tools & Tech Stack</h2>
+        <ul class="project-data-list">
+          <li><strong>Data Processing & Pipelines:</strong> Python, SQL, PL/Python</li>
+          <li><strong>Data Visualization & Dashboards:</strong> Apache Superset, Tableau</li>
+          <li><strong>Analytics & Big Data Platforms:</strong> BigQuery, AWS Athena, Firebase</li>
+          <li><strong>Frontend / Interfaces:</strong> HTML, CSS, basic JavaScript, Streamlit</li>
+          <li><strong>DevOps / CI-CD:</strong> Docker, GitHub workflows, containerization</li>
+        </ul>
       </div>
 
-      <!-- Key Projects Section (Placeholder) -->
-      <div class="content-section">
-        <h2>Key Projects</h2>
-        <p class="placeholder-text">Content coming soon...</p>
+      <!-- Projects and Impact Section -->
+      <div class="content-section" id="projects-impact">
+        <h2>Projects and Impact</h2>
+        
+        <!-- Project 1 -->
+        <div class="project-detail">
+          <h3 class="project-title">1. Bottlenecks Survival Project: Data Overview Dashboard</h3>
+          <p class="project-dates">Feb 2025 – Sep 2025</p>
+          
+          <div class="project-subsection">
+            <h4>Problem</h4>
+            <p>Research data collected since 2019 was spread across multiple tables and programs, making it difficult for scientists to track tagging progress, monitor work across watersheds, and understand survival patterns over time. Teams needed a single place to view and explore data across detection records, tagging information, locations, and pilot programs.</p>
+          </div>
+          
+          <div class="project-subsection">
+            <h4>Data</h4>
+            <ul class="project-data-list">
+              <li>400,000+ PIT-tagged salmon records</li>
+              <li>Detection data, tagging metadata, and biological attributes</li>
+              <li>Location and watershed information</li>
+              <li>Data from pilot programs (microtroll work, Avid Anglers)</li>
+              <li>Infrastructure details at monitoring sites</li>
+              <li>Outmigration and return season data from 2020 onward</li>
+            </ul>
+          </div>
+          
+          <div class="project-subsection">
+            <h4>Solution & Impact</h4>
+            <ul class="project-data-list">
+              <li>Built a cross-filterable dashboard, consolidating research data from 2019 onward into one place</li>
+              <li>Enabled tracking of tagging counts by location and watershed, hatchery vs. wild fish, survival and bycatch trends, and seasonal movement patterns</li>
+              <li>Designed the interface so researchers can explore data without writing SQL or interacting with backend systems</li>
+              <li>Replaced manual querying and spreadsheet-based reporting with an interactive, self-serve tool</li>
+              <li>Reduced reporting and data preparation time by ~90%</li>
+              <li>Used internally by Pacific Salmon Foundation and BCCF, and shared with partner organizations and First Nations partners to support program tracking and planning</li>
+            </ul>
+          </div>
+          
+          <div class="project-subsection">
+            <div class="project-meta">
+              <div class="meta-item">
+                <h4>Focus</h4>
+                <p>Data integration, Analytics, Visualization</p>
+              </div>
+              <div class="meta-item">
+                <h4>Tools</h4>
+                <p>Apache Superset, SQL, Python, CSS</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-detail">
+          <h3 class="project-title">2. Pinniped Census Data Pipeline (On-shore Cameras & Drone Imagery)</h3>
+          <p class="project-dates">Sep 2025 – Dec 2025</p>
+          
+          <div class="project-subsection">
+            <h4>Problem</h4>
+            <p>Pinniped census data was collected through motion-activated on-shore cameras and drone flights, but counts were done manually. This required researchers to sift through large volumes of images, slowing down reporting and making census updates time-intensive. The team needed a faster, more consistent way to track pinniped presence across locations to support salmon research.</p>
+          </div>
+          
+          <div class="project-subsection">
+            <h4>Data</h4>
+            <ul class="project-data-list">
+              <li>Motion-triggered on-shore camera images</li>
+              <li>Drone imagery collected across multiple coastal locations</li>
+              <li>Image data stored across local drives and OneDrive</li>
+              <li>Census data recorded in ODK databases</li>
+            </ul>
+          </div>
+          
+          <div class="project-subsection">
+            <h4>Solution</h4>
+            <ul class="project-data-list">
+              <li>Built an end-to-end pipeline that ingests on-shore and drone imagery, runs automated detection, and returns annotated images with per-site pinniped counts</li>
+              <li>Developed a simple Streamlit app allowing users to upload images or submit OneDrive links, with outputs ready for download or direct submission to the ODK database</li>
+              <li>Replaced manual image review and data entry, reducing census effort from ~1 week per site to under 10 minutes</li>
+              <li>Deployed as a public-facing tool and actively used by the PSF team for ongoing pinniped census work</li>
+            </ul>
+          </div>
+
+          <div class="project-subsection">
+            <div class="project-meta">
+              <div class="meta-item">
+                <h4>Focus</h4>
+                <p>Data pipelines, workflow automation, usability, and reducing manual effort</p>
+              </div>
+              <div class="meta-item">
+                <h4>Tools</h4>
+                <p>Python, Streamlit, YOLOv11, cloud storage (S3), ODK</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="content-section next-link">
+          <h2>Learn More</h2>
+          <div class="cta-buttons">
+            <a class="btn btn-primary" href="machine-learning.html">See how I use machine learning to automate monitoring</a>
+            <a class="btn btn-secondary" href="community-engagement.html">View my contributions to the data science community</a>
+          </div>
+        </div>
       </div>
 
-      <!-- Expertise Section (Placeholder) -->
-      <div class="content-section">
-        <h2>Areas of Expertise</h2>
-        <p class="placeholder-text">Content coming soon...</p>
-      </div>
     </div>
   </section>
 
   <!-- Footer -->
   <footer class="footer">
-    <p>&copy; 2024 Riya Eliza Shaju. All rights reserved.</p>
+    <p>&copy; 2026 Riya Eliza Shaju. All rights reserved.</p>
   </footer>
 
   <!-- Scripts -->
