@@ -1006,6 +1006,13 @@ body {
   margin: 0 auto 4rem;
 }
 
+.card {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
 .content-section h2 {
   font-size: 2rem;
   color: #1f2937;
@@ -1441,7 +1448,16 @@ mark {
 }
 
 .next-link {
-  margin-top: 3rem;
+  margin: 5rem 0 4rem 0;
+}
+
+.next-link h2 {
+  margin: 0 0 1.25rem 0;
+  text-align: center;
+}
+
+.next-link .cta-buttons {
+  margin-top: 1.5rem;
 }
 
 .cta-buttons {
