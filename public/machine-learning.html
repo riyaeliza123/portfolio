@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Machine Learning and Computer Vision - Riya Eliza Shaju</title>
+  <title>Data Science and Analytics - Riya Eliza Shaju</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,11 +20,15 @@
       <a href="index.html#verticals" class="back-button">
         <i class="fas fa-arrow-left"></i> Back to Profile
       </a>
-      <h1>Machine Learning and Computer Vision</h1>
+      <h1>Machine learning and Computer vision</h1>
       <div class="detail-nav">
-        <a href="data-science.html" class="nav-link">Data Science</a>
+        <a href="#overview" class="nav-link">Overview</a>
         <span>·</span>
-        <a href="community-engagement.html" class="nav-link">Community Engagement</a>
+        <a href="#what-i-do" class="nav-link">Key Responsibilities</a>
+        <span>·</span>
+        <a href="#tools-tech" class="nav-link">Tools & Tech</a>
+        <span>·</span>
+        <a href="#projects-impact" class="nav-link">Projects</a>
       </div>
     </div>
   </section>
@@ -33,40 +37,128 @@
   <section class="detail-content">
     <div class="container">
       <!-- Overview Section -->
-      <div class="content-section">
+      <div class="content-section" id="overview">
         <h2>Overview</h2>
-        <p>With a strong foundation in machine learning, I specialize in building predictive models and computer vision applications. My experience includes developing YOLO-based models for detection of wildlife, vessels, and other monitored targets, TensorFlow models for image classification, and various supervised learning algorithms for data analysis. I'm passionate about leveraging machine learning to solve real-world problems, build systems that help teams work more efficiently, reduce manual effort, and accelerate research and decision-making.</p>
+        <div class="card">
+          <p>My work in machine learning and computer vision focuses on building models that function reliably beyond research notebooks and into real-world use. I design, train, evaluate, and deploy end-to-end ML systems that replace manual workflows, scale monitoring efforts, and support faster, more consistent research.</p>
+          <p>I specialize in image-based modeling for monitoring applications, including wildlife, pinnipeds, and vessel detection. This work spans dataset curation and preprocessing, model development and iteration, and deployment in environments where data is noisy, conditions vary, and outputs must be trusted by end users.</p>
+          <p>My goal is to bridge the gap between theory and practice by delivering machine learning products that are practical, understandable, and ready to use.</p>
+        </div>
       </div>
 
-      <!-- Models & Frameworks Section (Placeholder) -->
-      <div class="content-section">
-        <h2>Models & Frameworks</h2>
-        <p class="placeholder-text">Content coming soon...</p>
+      <!-- What I Do Section -->
+      <div class="content-section" id="what-i-do">
+        <h2>Key Responsibilities</h2>
+        <div class="card">
+          <p>I focus on building machine learning systems that transition from idea to usable product, with reliability and real-world constraints in mind.</p>
+          <ul class="what-i-do-list">
+            <li>Design and train computer vision and supervised learning models for monitoring and classification tasks</li>
+            <li>Curate, clean, and prepare text and image-based datasets, including augmentation and quality checks</li>
+            <li>Evaluate models using accuracy, error patterns, and field performance rather than benchmark metrics alone</li>
+            <li>Build end-to-end ML workflows that simplify manual review and counting processes</li>
+            <li>Package and deploy models into usable tools through simple interfaces using containers and lightweight infrastructure so they can run reliably outside notebooks</li>
+            <li>Iterate on models based on real usage, feedback, and changing data conditions</li>
+          </ul>
+        </div>
       </div>
 
-      <!-- Computer Vision Projects Section (Placeholder) -->
-      <div class="content-section">
-        <h2>Computer Vision Projects</h2>
-        <p class="placeholder-text">Content coming soon...</p>
+      <!-- Tools & Tech Stack Section -->
+      <div class="content-section" id="tools-tech">
+        <h2>Tools & Tech Stack</h2>
+        <div class="card">
+          <ul class="project-data-list">
+            <li><strong>Modeling & ML:</strong> TensorFlow, PyTorch, YOLO, scikit-learn</li>
+            <li><strong>Data Handling:</strong> Python, NumPy, Pandas, OpenCV</li>
+            <li><strong>Deployment & Infrastructure:</strong> Docker, AWS, cloud storage, APIs, pipelines</li>
+            <li><strong>Interfaces & Usability:</strong> Streamlit, HTML, CSS, JavaScript</li>
+            <li><strong>Experimentation & Version Control:</strong> Jupyter notebooks, Git/GitHub</li>
+            <li><strong>CI/CD & Automation:</strong> GitHub workflows, containerization, reproducible pipelines</li>
+          </ul>
+        </div>
       </div>
 
-      <!-- Predictive Analytics Section (Placeholder) -->
-      <div class="content-section">
-        <h2>Predictive Analytics</h2>
-        <p class="placeholder-text">Content coming soon...</p>
+      <!-- Projects and Impact Section -->
+      <div class="content-section" id="projects-impact">
+        <h2>Projects and Impact</h2>
+        <div class="card">
+        
+        <!-- Project 1 -->
+        <div class="project-detail">
+          <h3 class="project-title">1. Pinniped Census via Drone Imagery (YOLOv11)</h3>
+          <p class="project-dates">Sep 2025 – Dec 2025</p>
+          
+          <div class="project-subsection">
+            <h4>Problem</h4>
+            <p>Counting pinnipeds from on-shore cameras and drone imagery was slow and labor-intensive. Researchers had to manually review thousands of images per site, making census updates time-consuming and prone to error. A faster, scalable solution was needed to automate detection while keeping results accessible to the team.</p>
+          </div>
+          
+          <div class="project-subsection">
+            <h4>Data</h4>
+            <ul class="project-data-list">
+              <li>618 images collected across Campbell River, Nanaimo, and Cowichan (Vancouver Island, Canada)</li>
+              <li>Preprocessed via augmentation and resizing for robust model training</li>
+              <li>Images captured from drones (multiple flights) and integrated with on-site census locations</li>
+            </ul>
+          </div>
+          
+          <div class="project-subsection">
+            <h4>Solution</h4>
+            <ul class="project-data-list">
+              <li>Trained a YOLOv11 model to automatically detect and count pinnipeds with high accuracy along with a Streamlit interface where users can upload images, view annotated detections, and download per-image or per-location counts</li>
+              <li>Integrated temporary cloud storage (S3) for image processing and connected outputs to ODK databases for easy submission</li>
+              <li>Packaged as a deployable, self-contained tool, allowing non-technical researchers to run full analyses without touching code</li>
+            </ul>
+          </div>
+
+          <div class="project-subsection">
+            <h4>Model Performance</h4>
+            <ul class="project-data-list">
+              <li>Precision: 94.4%, Recall: 72.7%, Accuracy: 80%</li>
+              <li>False positive rate: ~7.5%, AUC: 0.83</li>
+              <li>Confusion matrix demonstrates strong discrimination ability and reliability for practical use</li>
+            </ul>
+          </div>
+          
+          <div class="project-subsection">
+            <h4>Impact</h4>
+            <ul class="project-data-list">
+              <li>Reduced manual census effort from ~1 week per site to under 10 minutes</li>
+              <li>Fully deployed tool actively used by PSF researchers, enabling faster, more reliable pinniped monitoring</li>
+            </ul>
+          </div>
+
+          <div class="project-subsection">
+            <div class="project-meta">
+              <div class="meta-item">
+                <h4>Focus</h4>
+                <p>Computer vision, object detection, end-to-end ML product, deployment for real-world use</p>
+              </div>
+              <div class="meta-item">
+                <h4>Tools</h4>
+                <p>Python, YOLOv11, Streamlit, S3, ODK, Docker</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <!-- Impact & Applications Section (Placeholder) -->
-      <div class="content-section">
-        <h2>Impact & Applications</h2>
-        <p class="placeholder-text">Content coming soon...</p>
+      <!-- Learn More Section -->
+      <div class="content-section" id="learn-more">
+        <div class="card next-link">
+          <h2>Learn More</h2>
+          <div class="cta-buttons">
+            <a class="btn btn-primary" href="data-science.html">See how I use data science to build solutions</a>
+            <a class="btn btn-secondary" href="community-engagement.html">View my contributions to the data science community</a>
+          </div>
+        </div>
       </div>
+
     </div>
   </section>
 
   <!-- Footer -->
   <footer class="footer">
-    <p>&copy; 2024 Riya Eliza Shaju. All rights reserved.</p>
+    <p>&copy; 2026 Riya Eliza Shaju. All rights reserved.</p>
   </footer>
 
   <!-- Scripts -->
