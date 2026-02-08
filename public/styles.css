@@ -658,61 +658,58 @@ body {
 }
 
 .skills h2 {
-  font-size: 2.5rem;
+  font-size: 2.83rem;
   margin-bottom: 3rem;
   text-align: center;
   color: #1f2937;
 }
 
-.skills-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  max-width: 900px;
+/* 5-Column Skills Layout */
+.skills-columns {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.55rem;
+  max-width: 1236px;
   margin: 0 auto;
 }
 
-.skill-category {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
+.skill-column {
+  text-align: center;
 }
 
-.skill-category h4 {
-  font-size: 1.2rem;
+.skill-column h4 {
+  font-size: 1.13rem;
   color: #1f2937;
   font-weight: 600;
-  white-space: nowrap;
-  min-width: 180px;
-  padding-bottom: 0;
-  border-bottom: none;
-  padding-right: 2rem;
+  margin-bottom: 1.03rem;
+  padding-bottom: 0.515rem;
+  border-bottom: 2px solid #667eea;
 }
 
-.skill-tags {
+.skill-bubbles {
   display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
+  flex-direction: column;
+  gap: 0.62rem;
+  align-items: center;
 }
 
-.skill-tags span {
+.skill-bubble {
   display: inline-block;
   background: white;
   color: #2563eb;
-  padding: 0.75rem 1.5rem;
+  padding: 0.515rem 1.03rem;
   border-radius: 50px;
-  font-size: 0.95rem;
+  font-size: 0.96rem;
   font-weight: 500;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  transition: all 0.3s;
-  border: 2px solid transparent;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  width: fit-content;
+  white-space: nowrap;
 }
 
-.skill-tags span:hover {
-  background: #2563eb;
-  color: white;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.3);
+@media (max-width: 1024px) {
+  .skills-columns {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 @media (max-width: 768px) {
@@ -720,18 +717,14 @@ body {
     font-size: 2rem;
   }
 
-  .skill-category {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
+  .skills-columns {
+    grid-template-columns: repeat(2, 1fr);
   }
+}
 
-  .skill-category h4 {
-    border-right: none;
-    border-bottom: 2px solid #2563eb;
-    padding-right: 0;
-    padding-bottom: 0.5rem;
-    min-width: auto;
+@media (max-width: 480px) {
+  .skills-columns {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -1531,13 +1524,7 @@ mark {
   object-fit: cover;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: block;
-}
-
-.carousel-slide img:hover {
-  transform: scale(1.03);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
 }
 
 .carousel-caption {
@@ -1600,6 +1587,114 @@ mark {
     width: 38px;
     height: 38px;
     font-size: 0.9rem;
+  }
+}
+
+/* Awards Grid Styles */
+.awards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.award-item {
+  text-align: center;
+}
+
+.award-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.award-caption {
+  margin-top: 0.75rem;
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+@media (max-width: 600px) {
+  .awards-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Community Organizations Grid Styles */
+.orgs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.org-item {
+  text-align: center;
+}
+
+.org-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.org-caption {
+  margin-top: 0.75rem;
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+@media (max-width: 900px) {
+  .orgs-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .orgs-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Initiatives Grid Styles */
+.initiatives-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.initiative-item {
+  text-align: center;
+}
+
+.initiative-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.initiative-caption {
+  margin-top: 0.75rem;
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+@media (max-width: 900px) {
+  .initiatives-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .initiatives-grid {
+    grid-template-columns: 1fr;
   }
 }
 
