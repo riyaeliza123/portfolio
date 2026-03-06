@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Riya Eliza Shaju -  Data Scientist</title>
-  <link rel="stylesheet" href="styles.css?v=7">
+  <link rel="stylesheet" href="styles.css?v=10">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,31 +14,12 @@
   <!-- Particle Canvas Background -->
   <div id="particles-js"></div>
 
-  <!-- Sidebar Navigation -->
-  <nav class="sidebar-nav" id="sidebar-nav">
-    <ul>
-      <li>
-        <a href="#about">About</a>
-        <ul class="submenu">
-          <li><a href="data-science.html">Data Science</a></li>
-          <li><a href="machine-learning.html">Machine Learning</a></li>
-          <li><a href="community-engagement.html">Community Engagement</a></li>
-        </ul>
-      </li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#publications">Publications</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-
   <!-- Hero Section -->
   <section class="hero">
     <div class="hero-content">
       <h1 class="hero-name">Riya Eliza Shaju</h1>
       <p class="hero-title">Applied Data Scientist</p>
+      <p class="hero-location">Vancouver, BC</p>
       <div class="hero-social">
         <a href="https://linkedin.com/in/riya-eliza-shaju/" target="_blank" title="LinkedIn">
           <i class="fab fa-linkedin-in"></i>
@@ -234,13 +215,18 @@
             <img src="https://raw.githubusercontent.com/riyaeliza123/psf-image/refs/heads/main/psf%20logo.png" alt="Pacific Salmon Foundation">
           </div>
           <div class="timeline-marker"></div>
-          <div class="timeline-content">
+          <div class="timeline-content expandable" onclick="toggleExpand(this)">
             <div class="experience-header">
               <div class="header-title-date">
                 <h3>Applied Data Scientist</h3>
                 <p class="date">Sep 2024 – Present</p>
               </div>
               <p class="company">Pacific Salmon Foundation</p>
+              <span class="expand-icon"><i class="fas fa-chevron-down"></i></span>
+            </div>
+            <div class="experience-details">
+              <p>As an independent contractor at the Pacific Salmon Foundation, I develop data and machine learning tools that support research programs led by PSF, the Department of Fisheries and Oceans (DFO), and the British Columbia Conservation Foundation (BCCF). My work includes building interactive dashboards that integrate multi-source datasets for in-season monitoring, site tracking, and analysis of salmon survival within the Bottlenecks to Survival initiative.</p>
+              <p>I also design machine learning models and data pipelines to support research workflows, including predicting salmon outmigration timing and automating image-based monitoring. A key focus of my work is computer vision systems that enable automated census of pinnipeds and other activity from shore and drone imagery across Vancouver Island.</p>
             </div>
           </div>
         </div>
@@ -250,13 +236,17 @@
             <img src="img/mds.jpeg" alt="University of British Columbia">
           </div>
           <div class="timeline-marker"></div>
-          <div class="timeline-content">
+          <div class="timeline-content expandable" onclick="toggleExpand(this)">
             <div class="experience-header">
               <div class="header-title-date">
                 <h3>Graduate Teaching Assistant</h3>
                 <p class="date">Sept 2024 – Oct 2024</p>
               </div>
               <p class="company">Master of Data Science (MDS) - University of British Columbia</p>
+              <span class="expand-icon"><i class="fas fa-chevron-down"></i></span>
+            </div>
+            <div class="experience-details">
+              <p>Teaching Assistant for the Master of Data Science program for DSCI 523: Programming for Data Manipulation using R.</p>
             </div>
           </div>
         </div>
@@ -266,13 +256,17 @@
             <img src="img/mfre.jpeg" alt="University of British Columbia">
           </div>
           <div class="timeline-marker"></div>
-          <div class="timeline-content">
+          <div class="timeline-content expandable" onclick="toggleExpand(this)">
             <div class="experience-header">
               <div class="header-title-date">
                 <h3>Data Analytics Instructor</h3>
                 <p class="date">Aug 2024 – Dec 2024</p>
               </div>
               <p class="company">Master of Food and Resource Economics (MFRE) - University of British Columbia</p>
+              <span class="expand-icon"><i class="fas fa-chevron-down"></i></span>
+            </div>
+            <div class="experience-details">
+              <p>Applied data analytics instructor for FRE 501 (Strategic Economic Analysis of Agri-Food Markets) at the UBC Land and Food Systems department.</p>
             </div>
           </div>
         </div>
@@ -282,13 +276,23 @@
             <img src="https://raw.githubusercontent.com/riyaeliza123/psf-image/refs/heads/main/psf%20logo.png" alt="Pacific Salmon Foundation">
           </div>
           <div class="timeline-marker"></div>
-          <div class="timeline-content">
+          <div class="timeline-content expandable" onclick="toggleExpand(this)">
             <div class="experience-header">
               <div class="header-title-date">
-                <h3>Data Scientist - Captone Project</h3>
+                <h3>Data Scientist - Capstone Project</h3>
                 <p class="date">May 2024 – Jun 2024</p>
               </div>
               <p class="company">Pacific Salmon Foundation</p>
+              <span class="expand-icon"><i class="fas fa-chevron-down"></i></span>
+            </div>
+            <div class="experience-details">
+              <p>As part of my Master of Data Science capstone at the University of British Columbia, I worked with the Pacific Salmon Foundation on an 8-week applied research project titled Survival Analysis of Salmon in the Salish Sea, supporting the Bottlenecks to Survival initiative with data from the Strait of Georgia Data Centre. We built the following projects:</p>
+              <ul>
+                <li>A prediction model to identify and fill missing dataset attributes (e.g., species) using decision trees and deep learning</li>
+                <li>A model to predict the return timing of out-migrated salmon</li>
+                <li>A Bayesian survival analysis model (Cormack–Jolly–Seber) to estimate survival rates across life stages and compare hatchery-origin vs. wild-origin fish</li>
+                <li>A reproducible pipeline using PL/Python and scheduled jobs (Cron) to automate model retraining and prediction workflows</li>
+              </ul>
             </div>
           </div>
         </div>
@@ -298,13 +302,18 @@
             <img src="img/nus.jpeg" alt="National University of Singapore">
           </div>
           <div class="timeline-marker"></div>
-          <div class="timeline-content">
+          <div class="timeline-content expandable" onclick="toggleExpand(this)">
             <div class="experience-header">
               <div class="header-title-date">
                 <h3>Machine Learning Research Intern</h3>
                 <p class="date">Dec 2022 – Apr 2023</p>
               </div>
               <p class="company">National University of Singapore</p>
+              <span class="expand-icon"><i class="fas fa-chevron-down"></i></span>
+            </div>
+            <div class="experience-details">
+              <p>During a 6-month research internship with the NUS School of Computing, I worked on a medical alert system by incorporating computer vision and emotion detection from live video feeds.</p>
+              <p>My work involved developing and testing deep learning models capable of identifying emotional states in real time. I evaluated and compared multiple machine learning approaches for neural network–based emotion recognition, assessing their performance and suitability for continuous video input.</p>
             </div>
           </div>
         </div>
@@ -314,13 +323,18 @@
             <img src="img/wipro.jpeg" alt="Wipro">
           </div>
           <div class="timeline-marker"></div>
-          <div class="timeline-content">
+          <div class="timeline-content expandable" onclick="toggleExpand(this)">
             <div class="experience-header">
               <div class="header-title-date">
                 <h3>UX/Analytics Research Intern</h3>
                 <p class="date">Jun 2022 – Jul 2022</p>
               </div>
               <p class="company">Wipro</p>
+              <span class="expand-icon"><i class="fas fa-chevron-down"></i></span>
+            </div>
+            <div class="experience-details">
+              <p> This research internship at Wipro focused on Embedded Analytics as an Accessible Solution. My work explored how analytics can be integrated directly into user-facing products to make data more accessible and actionable.</p>
+              <p>Researched and applied concepts across data visualization, design thinking, UI/UX, and accessibility in analytics tools, focusing on how embedded analytics can improve user interaction with data and support better decision-making within applications. </p>
             </div>
           </div>
         </div>
@@ -330,13 +344,18 @@
             <img src="img/ombre.jpeg" alt="Ombre">
           </div>
           <div class="timeline-marker"></div>
-          <div class="timeline-content">
+          <div class="timeline-content expandable" onclick="toggleExpand(this)">
             <div class="experience-header">
               <div class="header-title-date">
                 <h3>Junior Data Scientist</h3>
                 <p class="date">Sep 2020 – Jul 2021</p>
               </div>
               <p class="company">Ombre</p>
+              <span class="expand-icon"><i class="fas fa-chevron-down"></i></span>
+            </div>
+            <div class="experience-details">
+              <p>As an early team member at a funded startup, I worked across data, product analytics, and operations during the company's initial growth stage. Led efforts to identify and onboard live music sources for the platform while managing a team of 7–10 interns who supported automation of backend workflows.</p>
+              <p>Worked on product analytics, analyzing user behavior and engagement to provide insights that informed product and UX improvements. Also supported recruitment for the data team, helping identify and hire new members as the team expanded.</p>
             </div>
           </div>
         </div>

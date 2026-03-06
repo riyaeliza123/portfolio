@@ -369,8 +369,69 @@ body {
   margin-top: 0;
 }
 
+.timeline-content.expandable {
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+}
+
+.timeline-content.expandable:hover {
+  box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
 .experience-header {
   margin-bottom: 0.75rem;
+  position: relative;
+}
+
+.expand-icon {
+  position: absolute;
+  right: 0;
+  top: calc(50% + 8px);
+  transform: translateY(-50%);
+  color: #667eea;
+  transition: transform 0.3s ease;
+  font-size: 1rem;
+}
+
+.timeline-content.expanded .expand-icon {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.experience-details {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.3s ease;
+  padding-top: 0;
+}
+
+.timeline-content.expanded .experience-details {
+  max-height: 500px;
+  padding-top: 1rem;
+  border-top: 1px solid #eee;
+  margin-top: 0.75rem;
+}
+
+.experience-details p {
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-bottom: 0.75rem;
+}
+
+.experience-details p:last-child {
+  margin-bottom: 0;
+}
+
+.experience-details ul {
+  margin-left: 1.25rem;
+  margin-top: 0.5rem;
+}
+
+.experience-details li {
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-bottom: 0.5rem;
 }
 
 .header-title-date {

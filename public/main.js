@@ -48,3 +48,8 @@ document.addEventListener('DOMContentLoaded', function() {
     })(containers[i]);
   }
 });
+
+// Toggle expandable work experience
+function toggleExpand(element) {
+  element.classList.toggle('expanded');
+}
