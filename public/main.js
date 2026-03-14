@@ -26,7 +26,8 @@ document.addEventListener('DOMContentLoaded', function() {
         if (currentIndex > max) currentIndex = max;
         if (currentIndex < 0) currentIndex = 0;
         var w = slides[0].offsetWidth;
-        track.style.transform = 'translateX(-' + (currentIndex * (w + 24)) + 'px)';
+        var gap = (window.innerWidth <= 600) ? 0 : 24;
+        track.style.transform = 'translateX(-' + (currentIndex * (w + gap)) + 'px)';
         btnLeft.disabled = (currentIndex === 0);
         btnRight.disabled = (currentIndex >= max);
       }
