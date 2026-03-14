@@ -1833,11 +1833,15 @@ mark {
   .carousel-slide {
     flex: 0 0 calc((100% - 1.5rem) / 2) !important;
     min-width: calc((100% - 1.5rem) / 2) !important;
-    max-width: calc((100% - 1.5rem) / 2) !important;
+    max-width: calc((100% - 0.1rem) / 2) !important;
   }
 }
 
 @media (max-width: 600px) {
+  .carousel-container {
+    gap: 1rem;
+  }
+  
   .carousel-track {
     gap: 0 !important;
   }
@@ -1846,7 +1850,7 @@ mark {
     flex: 0 0 100% !important;
     min-width: 100% !important;
     max-width: 100% !important;
-    padding: 0 28px;
+    padding: 0 2px;
     box-sizing: border-box;
     text-align: center;
   }

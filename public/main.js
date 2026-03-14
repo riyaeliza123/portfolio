@@ -25,9 +25,16 @@ document.addEventListener('DOMContentLoaded', function() {
         if (max < 0) max = 0;
         if (currentIndex > max) currentIndex = max;
         if (currentIndex < 0) currentIndex = 0;
-        var w = slides[0].offsetWidth;
-        var gap = (window.innerWidth <= 600) ? 0 : 24;
-        track.style.transform = 'translateX(-' + (currentIndex * (w + gap)) + 'px)';
+        
+        // On mobile (1 slide), use percentage for perfect centering
+        if (v === 1) {
+          track.style.transform = 'translateX(-' + (currentIndex * 100) + '%)';
+        } else {
+          var w = slides[0].offsetWidth;
+          var gap = 24;
+          track.style.transform = 'translateX(-' + (currentIndex * (w + gap)) + 'px)';
+        }
+        
         btnLeft.disabled = (currentIndex === 0);
         btnRight.disabled = (currentIndex >= max);
       }
