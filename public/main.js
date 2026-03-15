@@ -61,3 +61,56 @@ document.addEventListener('DOMContentLoaded', function() {
 function toggleExpand(element) {
   element.classList.toggle('expanded');
 }
+
+// Hero Carousel - Sliding Window Animation
+document.addEventListener('DOMContentLoaded', function() {
+  var heroTrack = document.getElementById('heroCarouselTrack');
+  if (!heroTrack) return;
+  
+  var slides = heroTrack.querySelectorAll('.hero-carousel-slide');
+  var totalSlides = slides.length;
+  var currentIndex = 0;
+  
+  function getVisibleCount() {
+    if (window.innerWidth <= 768) return 1;
+    return 4;
+  }
+  
+  function updateHeroCarousel() {
+    var visible = getVisibleCount();
+    var slideWidth = slides[0].offsetWidth;
+    
+    // On mobile (1 slide), use percentage for perfect alignment
+    if (visible === 1) {
+      heroTrack.style.transform = 'translateX(-' + (currentIndex * 100) + '%)';
+    } else {
+      var gap = 6;
+      var offset = currentIndex * (slideWidth + gap);
+      heroTrack.style.transform = 'translateX(-' + offset + 'px)';
+    }
+  }
+  
+  function nextSlide() {
+    var visible = getVisibleCount();
+    var maxIndex = totalSlides - visible;
+    currentIndex++;
+    if (currentIndex > maxIndex) {
+      currentIndex = 0;
+    }
+    updateHeroCarousel();
+  }
+  
+  // Auto-advance every 3 seconds
+  setInterval(nextSlide, 3000);
+  
+  // Update on resize
+  window.addEventListener('resize', function() {
+    var visible = getVisibleCount();
+    var maxIndex = totalSlides - visible;
+    if (currentIndex > maxIndex) currentIndex = maxIndex;
+    if (currentIndex < 0) currentIndex = 0;
+    updateHeroCarousel();
+  });
+  
+  updateHeroCarousel();
+});
